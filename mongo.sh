@@ -1,1 +1,2 @@
-sudo docker exec -it mongo1 mongo
+sudo docker exec -it mdbrp001  mongo
+

@@ -1,7 +1,7 @@
 # mongoDocker
 
 
-
+```
 ubuntu@FREE0001:~$ mongo FREE0001:37018
 MongoDB shell version v3.6.3
 connecting to: mongodb://FREE0001:37018/test
@@ -23,3 +23,4 @@ Server has startup warnings:
 2019-03-21T01:18:50.509+0000 I CONTROL  [initandlisten] **        We suggest setting it to 'never'
 2019-03-21T01:18:50.510+0000 I CONTROL  [initandlisten] 
 my-mongo-set:PRIMARY> 
+```

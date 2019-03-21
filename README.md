@@ -24,31 +24,31 @@ Server has startup warnings:
 2019-03-21T01:18:50.510+0000 I CONTROL  [initandlisten] 
 my-mongo-set:PRIMARY> 
 ```
-# H1 Creating a MongoDB replica set using Docker 🍃
+# Creating a MongoDB replica set using Docker 🍃
 June 30, 2016
-## H2 architecture diagram
+##  architecture diagram
 Replication is a technique used my MongoDB to ensure that your data is always backed up for safe keeping, in case one of your database servers decide to crash, shut down or turn into Ultron. Even though replication as a concept sounds easy, it’s quite daunting for newcomers to set up their own replica sets, much less containerize them.
 This tutorial is a beginner friendly way to set up your own MongoDB replica sets using docker.
 
-## H3 Pre-requisites
+##  Pre-requisites
 The only thing we need installed on our machines is Docker, and… that’s it! We don’t even need to install MongoDB to create our replica set, since we can access the shell through our containers itself.
 
 To verify that you have docker installed run :
 
-## H3 docker -v
+## docker -v
 ,which should output the version number. Next, we need to make sure our docker daemon is running. So run :
 
-## H3 docker images
+## docker images
 ,which should output the list of images you currently have on your system.
 Next, we will get the latest version of the official Mongo image, by running
 
 ```docker pull mongo```
 Great! Now were all set to get up and running.
 
-## H3 Overview
+## Overview
 We are going to have 3 containers from the mongo image, all inside their own docker container network. Let’s name them mongo1, mongo2, and mongo3. These will be the three mongo instances of our replica set. We are also going to expose each of them to our local machine, so that we can access any of them using the mongo shell interface from our local machine if we need to (you will have to install MongoDB on your own machine to do this). Each of the three mongo container should be able to communicate with all other containers in the network.
 
-## H3 architecture diagram
+## architecture diagram
 Setting up the network
 To see all networks currently on your system, run the command
 ```
